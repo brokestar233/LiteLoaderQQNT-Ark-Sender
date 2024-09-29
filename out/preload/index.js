@@ -1,1 +1,1 @@
-"use strict";const e=require("electron"),t="liteloader-napcatcore-template",c={configUpdate(n){e.ipcRenderer.send(`${t}:update`,n)}};e.contextBridge.exposeInMainWorld(t,c);
+"use strict";const e=require("electron"),r="ark_sender";e.contextBridge.exposeInMainWorld(r,{configUpdate:n=>e.ipcRenderer.invoke(`LiteLoader.${r}.configUpdate`,n),onBarClick:()=>e.ipcRenderer.invoke(`LiteLoader.${r}.onBarClick`)});

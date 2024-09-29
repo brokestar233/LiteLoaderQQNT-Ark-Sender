@@ -1,9 +1,10 @@
 {
-  "name": "liteloader-napcatcore-template",
+  "name": "ark_sender",
   "version": "0.0.1",
-  "description": "个人自用插件开发模板",
-  "main": "./out/main/index.js",
-  "author": "nyaruhodoo",
+  "description": "一个用于发送Ark消息的插件",
+  "main": "./out//main/index.js",
+  "author": "brokestar233",
+  "license": "GPL-3.0-only",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "@electron-toolkit/utils": "^3.0.0",
+    "axios": "^1.7.7",
     "napcat.core": "^1.0.3"
   },
   "devDependencies": {
@@ -26,7 +28,10 @@
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "sass": "^1.77.8",
+    "unplugin-zip-pack": "^1.0.2",
     "typescript": "^5.5.2",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "vite-plugin-checker": "^0.7.2",
+    "vite-plugin-cp": "^4.0.8"
   }
 }

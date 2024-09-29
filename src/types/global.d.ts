@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/prefer-namespace-keyword */
 declare namespace LiteLoader {
   const path: ILiteLoaderPath
   const versions: ILiteLoaderVersion

@@ -19,6 +19,9 @@ export const enum EventEnum {
   // 更新
   fetchUnitedCommendConfig = 'NodeIQQNTWrapperSession/create/getUnitedConfigService/fetchUnitedCommendConfig',
 
+  //获取clientkey
+  forceFetchClientKey = 'NodeIQQNTWrapperSession/create/getTicketService/forceFetchClientKey',
+
   //----------------- * IPC 部分 * -----------------
 
   // 收到新消息(只会收到已激活窗口消息)

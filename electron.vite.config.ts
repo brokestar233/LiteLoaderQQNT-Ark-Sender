@@ -1,6 +1,10 @@
 import { join, resolve } from 'node:path'
 import { defineConfig } from 'electron-vite'
 import type { UserConfig } from 'vite'
+import viteCp from 'vite-plugin-cp'
+import viteZipPack from 'unplugin-zip-pack/vite'
+
+const slug = 'ark_sender'
 
 const baseConfig: UserConfig = {
   resolve: {
@@ -27,6 +31,19 @@ export default defineConfig({
    */
   renderer: {
     ...baseConfig,
+    plugins: [
+      viteCp({
+        targets: [
+          { src: './manifest.json', dest: 'out' },
+          { src: './assets/icon.svg', dest: 'out/assets' },
+          { src: './style/global.css', dest: 'out/style' },
+        ]
+      }),
+      viteZipPack({
+        in: './out',
+        out: resolve(__dirname, `./${slug}.zip`)
+      })
+    ],
     build: {
       rollupOptions: {
         input: resolve(__dirname, 'src/renderer/index.ts')
