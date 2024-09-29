@@ -8,7 +8,9 @@ contextBridge.exposeInMainWorld(slug, {
     `LiteLoader.${slug}.configUpdate`,
     config
   ),
-  onBarClick: () => ipcRenderer.invoke(
-    `LiteLoader.${slug}.onBarClick`
+  onBarClick: (uin: string, text:string) => ipcRenderer.invoke(
+    `LiteLoader.${slug}.onBarClick`,
+    uin,
+    text
   )
 })

@@ -1,9 +1,8 @@
 import { hookWrapper } from '@/main/hook/hookWrapper'
 import { EventEnum } from './enum/eventEnum'
-import { run } from './getcookie'
+import { run } from './signandsendark'
 import { ipcMain } from 'electron'
 import { slug } from '@/manifest'
-import type { forceFetchClientKeyRetType } from 'napcat.core'
 
 (async () => {
   await hookWrapper({
@@ -14,13 +13,7 @@ import type { forceFetchClientKeyRetType } from 'napcat.core'
   });
 })()
 
-ipcMain.handle(`LiteLoader.${slug}.onBarClick`, (event) => {
+ipcMain.handle(`LiteLoader.${slug}.onBarClick`, (event, uin, text) => {
   console.log('BarClick')
-  run()
+  run(uin,text)
 })
-
-// Hook IPC 必须在 onBrowserWindowCreated 中调用
-// exports.onBrowserWindowCreated = (window: Electron.CrossProcessExports.BrowserWindow) => {
-//   // window 为 Electron 的 BrowserWindow 实例
-//   hookIPC(window)
-// }
