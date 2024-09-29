@@ -7,8 +7,7 @@
 - [Vite](https://vitejs.dev/)
 - [electron-vite](https://electron-vite.org/)
 - [LiteLoaderQQNT](https://github.com/LiteLoaderQQNT/LiteLoaderQQNT/)
-- [LLOneBot](https://github.com/LLOneBot/LLOneBot)
-- [LiteLoaderQQNT-PluginTemplate-Vite-pnpm](https://github.com/adproqwq/LiteLoaderQQNT-PluginTemplate-Vite-pnpm)
+- [LiteLoader-NapCatCore-Template](https://github.com/nyaruhodoo/LiteLoader-NapCatCore-Template)
 
 ## License
 
